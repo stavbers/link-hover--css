@@ -1,0 +1,66 @@
+h1 {
+    font-family: 'Baloo Tamma 2', sans-serif;
+    font-size: 2rem;
+  }
+  
+  p {
+    font-family: 'Baloo Tamma 2', sans-serif;
+    font-size: 1.4rem;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .paragraph-container {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .link {
+    position: relative;
+  }
+  
+  .link::before {
+    content: "Click";
+    font-size: 0.9em;
+    background: black;
+    color: white;
+    line-height: 1em;
+    padding: 0.2em 0.15em 0;
+    border-radius: 0.2em;
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-65%, 20%) rotateZ(-1deg);
+    transition: 0.4s opacity cubic-bezier(0.33, 1, 0.68, 1), 0.4s transform cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+  .link:after {
+    content: "me!";
+    position: absolute;
+    font-size: 0.9em;
+    background: black;
+    color: white;
+    line-height: 1em;
+    padding: 0.2em 0.15em 0;
+    border-radius: 0.2em;
+    top: -1em;
+    left: 50%;
+    opacity: 0;
+    transform: translate(45%, 20%) rotateZ(1deg);
+    transition: 0.4s opacity cubic-bezier(0.33, 1, 0.68, 1), 0.4s transform cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+  .link:hover::before {
+    opacity: 1;
+    transform: translatex(-75%) rotateZ(-3deg);
+  }
+  
+  .link:hover::after {
+    opacity: 1;
+    transform: translatex(45%) rotateZ(3deg);
+  }
